@@ -16,7 +16,7 @@
 <meta property="og:title" content="젠틀페이 — 카톡 한번으로 끝! 내 비상금 한도 바로찾기">
 <meta property="og:description" content="{{ SITE_DESCRIPTION }}">
 <meta property="og:url" content="{{ SITE_URL }}/">
-<meta property="og:image" content="{{ SITE_URL }}/static/img/og-gentlepay.png">
+<meta property="og:image" content="{{ SITE_URL }}/static/img/og-gentlepay-v2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
@@ -47,9 +47,9 @@ ChannelIO('boot',{pluginKey:'{{ CHANNELTALK_PLUGIN_KEY }}',hideChannelButtonOnBo
 {% endif %}
 <style>
 :root{
-  --main:#2F7BFF; --deep:#1A5CE6; --pale:#EAF2FF;
-  --ink:#191919; --gray:#767676; --gray-l:#F5F8FD; --line:#E6ECF5;
-  --green:#12B76A; --navy:#0A2463;
+  --main:#8A5CF5; --deep:#6D3FE0; --pale:#F1EBFF;
+  --ink:#191919; --gray:#767676; --gray-l:#F8F6FD; --line:#ECE6F5;
+  --green:#12B76A; --navy:#2A1260;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -87,7 +87,7 @@ section{padding:90px 0;text-align:center}
 .gc .gc-rt{position:absolute;left:18px;bottom:38px;font-size:20px;font-weight:900;letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
 .gc .gc-rt small{display:block;font-size:10.5px;font-weight:700;opacity:.75;letter-spacing:.04em}
 .g-green{background:linear-gradient(135deg,#00B274,#007A50)}
-.g-blue{background:linear-gradient(135deg,#4A7DF0,#2648A8)}
+.g-blue{background:linear-gradient(135deg,#9A6BF2,#4A2A9E)}
 .g-orange{background:linear-gradient(135deg,#FF9A4D,#F2612E)}
 .g-violet{background:linear-gradient(135deg,#7B57EC,#4A2FB8)}
 .g-pink{background:linear-gradient(135deg,#FF6D96,#E0356B)}
@@ -101,7 +101,7 @@ header.scrolled{box-shadow:0 4px 18px rgba(0,0,0,.06)}
 .nav{max-width:1040px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:900;letter-spacing:-0.02em}
 .logo .lg{height:28px}
-.lg{display:block;width:auto;--mk-d:#0B2470;--mk-on:#fff;--m2:#1A5CE6}
+.lg{display:block;width:auto;--mk-d:#2A1260;--mk-on:#fff;--m2:#6D3FE0}
 @media(max-width:600px){.logo .lg{height:24px}}
 .logo b{color:var(--navy)}.logo b span{color:var(--main)}
 .logo small{white-space:nowrap;font-size:13px;font-weight:700;color:var(--gray)}
@@ -111,7 +111,7 @@ header.scrolled{box-shadow:0 4px 18px rgba(0,0,0,.06)}
 
 /* hero — GENTLE PAY 로고 + 파란 물결 */
 .hero{position:relative;overflow:hidden;padding:36px 20px 120px;text-align:center;background:var(--hero-bg)}
-.hero::before{content:"";position:absolute;left:50%;top:30%;width:640px;height:640px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(47,123,255,.14),transparent 65%);pointer-events:none}
+.hero::before{content:"";position:absolute;left:50%;top:30%;width:640px;height:640px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(138,92,245,.14),transparent 65%);pointer-events:none}
 .hero-logo{position:relative;padding:18px 0 6px;animation:rise .8s ease both}
 .hero-logo .lg{height:clamp(64px,14vw,120px);margin:0 auto}
 .hero-logo .tg{margin-top:12px;font-size:clamp(15px,3.2vw,22px);font-weight:500;letter-spacing:.12em;color:var(--hero-tx)}
@@ -123,7 +123,7 @@ header.scrolled{box-shadow:0 4px 18px rgba(0,0,0,.06)}
 .hero .ch-btn{margin-top:26px;animation:rise .7s ease .3s both}
 /* 한도 카드 3종 */
 .limits{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,2vw,16px);max-width:780px;margin:26px auto 0;animation:rise .7s ease .28s both}
-.lim{text-align:center;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line,#E6ECF5);border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(15,35,90,.07)}
+.lim{text-align:center;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line,#ECE6F5);border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(42,18,96,.07)}
 .lim img{display:block;width:96%;max-width:190px;height:auto;margin:6px auto 0}
 .lim .k{margin-top:4px;font-size:clamp(12px,2.8vw,17px);font-weight:600;color:#333;letter-spacing:-0.03em}
 .lim .v{margin:2px 0 14px;font-size:clamp(20px,5.6vw,40px);font-weight:900;letter-spacing:-0.05em;line-height:1.15;color:var(--deep);white-space:nowrap}
@@ -133,7 +133,7 @@ header.scrolled{box-shadow:0 4px 18px rgba(0,0,0,.06)}
 .hero .note b{color:#5A6478}
 .hero .wave{position:absolute;left:0;bottom:-1px;width:100%;height:110px;pointer-events:none}
 /* 채널톡 상담 버튼 (히어로·팝업 공용) */
-.ch-btn{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,var(--main),var(--deep));color:#fff;font-size:16px;font-weight:800;padding:16px 30px;border-radius:999px;box-shadow:0 12px 28px rgba(26,92,230,.35);transition:transform .15s;position:relative;white-space:nowrap}
+.ch-btn{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(135deg,var(--main),var(--deep));color:#fff;font-size:16px;font-weight:800;padding:16px 30px;border-radius:999px;box-shadow:0 12px 28px rgba(109,63,224,.35);transition:transform .15s;position:relative;white-space:nowrap}
 .ch-btn:hover{transform:translateY(-2px)}
 .ch-btn svg{width:22px;height:22px;flex:none}
 .ch-btn i{font-style:normal;font-weight:900;padding-left:14px;border-left:1px solid rgba(255,255,255,.4)}
@@ -148,7 +148,7 @@ header.scrolled{box-shadow:0 4px 18px rgba(0,0,0,.06)}
 .stat .em b{font-weight:800}
 .stat .em p{color:var(--gray);margin-top:4px}
 .stat .chev{margin:26px auto 0;width:26px;color:#C9C9C9;animation:bounceDown 1.6s ease-in-out infinite}
-.btn-big{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:30px;background:var(--main);color:#fff;font-size:17px;font-weight:900;padding:19px 0;width:min(420px,88vw);border-radius:14px;box-shadow:0 10px 26px rgba(26,92,230,.35);transition:transform .15s}
+.btn-big{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:30px;background:var(--main);color:#fff;font-size:17px;font-weight:900;padding:19px 0;width:min(420px,88vw);border-radius:14px;box-shadow:0 10px 26px rgba(109,63,224,.35);transition:transform .15s}
 .btn-big:hover{transform:translateY(-2px)}
 
 /* phone mockup */
@@ -272,14 +272,14 @@ footer a{text-decoration:underline}
 .fab:hover .tip{opacity:1}
 
 /* 채널톡 안내 팝업 */
-.pop{position:fixed;inset:0;z-index:100;background:rgba(10,36,99,.55);display:flex;align-items:center;justify-content:center;padding:16px;animation:popFade .25s ease}
+.pop{position:fixed;inset:0;z-index:100;background:rgba(42,18,96,.55);display:flex;align-items:center;justify-content:center;padding:16px;animation:popFade .25s ease}
 .pop[hidden]{display:none}
 @keyframes popFade{from{opacity:0}}
 .pop-box{position:relative;zoom:.8;width:min(580px,100%);max-height:calc((100vh - 32px)/.8);overflow:auto;padding:clamp(14px,4vw,28px);border-radius:6px;
-  background:linear-gradient(rgba(255,255,255,.45) 1px,transparent 1px) 0 0/22px 22px,linear-gradient(90deg,rgba(255,255,255,.45) 1px,transparent 1px) 0 0/22px 22px,#CFE0FF;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+  background:linear-gradient(rgba(255,255,255,.45) 1px,transparent 1px) 0 0/22px 22px,linear-gradient(90deg,rgba(255,255,255,.45) 1px,transparent 1px) 0 0/22px 22px,#E2D6FF;box-shadow:0 30px 80px rgba(0,0,0,.35)}
 .pop-x{position:absolute;right:8px;top:8px;z-index:2;width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center}
 .pop-x svg{width:20px;height:20px}
-.pop-in{cursor:pointer;--px:clamp(12px,4vw,26px);background:#FBFCFF;box-shadow:5px 5px 0 #6E8FC9;padding:0 var(--px);text-align:center}
+.pop-in{cursor:pointer;--px:clamp(12px,4vw,26px);background:#FDFBFF;box-shadow:5px 5px 0 #9B82D6;padding:0 var(--px);text-align:center}
 .checker{height:16px;margin:0 calc(-1*var(--px));background:repeating-conic-gradient(var(--deep) 0 25%,#fff 0 50%) 0 0/16px 16px}
 .pop-in h2{margin:22px 0 4px;font-size:clamp(25px,7vw,38px);font-weight:900;letter-spacing:-0.05em;line-height:1.35;color:var(--ink)}
 .pop-in h2 .b{color:var(--main)}
@@ -294,7 +294,7 @@ footer a{text-decoration:underline}
 .pop .ch-btn.sm svg{width:16px;height:16px}
 .pop .ch-btn.sm i{padding-left:9px}
 .pc-mock .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-.tel-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--navy);border:1.5px solid #B9CDF2;border-radius:999px;font-size:12.5px;font-weight:800;padding:8px 14px;white-space:nowrap}
+.tel-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--navy);border:1.5px solid #D3C3F5;border-radius:999px;font-size:12.5px;font-weight:800;padding:8px 14px;white-space:nowrap}
 .tel-btn svg{width:15px;height:15px;color:var(--main)}
 .tel-btn small{font-size:inherit;font-weight:600;color:#6A7488}
 .pop-sec>.ch-btn{margin-top:14px;font-size:14px;padding:12px 22px}
@@ -320,8 +320,8 @@ footer a{text-decoration:underline}
 @media(max-width:480px){.pop-box{width:86%}.pop-sec>.ch-btn{font-size:13px;padding:11px 16px;gap:10px}.pop-sec>.ch-btn i{padding-left:10px}.mo-mock{flex-basis:46%}.mo-mock .ch-btn i,.mo-txt .ch-btn i{display:none}.pop-in h2{margin-top:16px}.pop-sec{margin-top:26px;padding-top:26px}}
 
 /* ── 히어로·버튼 테마 토큰 ── */
-:root{--hero-bg:linear-gradient(180deg,#fff 0%,#F3F8FF 55%,var(--pale) 100%);--wm:#0B2470;--wm2:#1E6BFF;--hero-tx:#4A5568;--mock2:#C9DCFF;
-  --m1:#5AA2FF;--m2:#1A5CE6;--m3:#0A2E9E;--w1:#9CC2FF;--w2:#2F7BFF;--w3:#fff;--r-btn:999px}
+:root{--hero-bg:linear-gradient(180deg,#fff 0%,#F8F4FF 55%,var(--pale) 100%);--wm:#2A1260;--wm2:#7B4EEC;--hero-tx:#4A5568;--mock2:#DCCBFF;
+  --m1:#B08CFF;--m2:#6D3FE0;--m3:#4A1FB8;--w1:#C9B2FF;--w2:#8A5CF5;--w3:#fff;--r-btn:999px}
 .hero .wave .w1{fill:var(--w1);opacity:.35}.hero .wave .w2{fill:var(--w2);opacity:.55}.hero .wave .w3{fill:var(--w3)}
 .ch-btn,.btn-big,.pill,.p-btn{border-radius:var(--r-btn)}
 
@@ -359,8 +359,8 @@ footer a{text-decoration:underline}
     <symbol id="i-coin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8 9l1.6 6L12 9l2.4 6L16 9M7.2 11.6h9.6"/></symbol>
     <!-- 후기 아바타 (플랫 일러스트 placeholder) — AI 아바타 이미지 확보 시 reviews 배열의 img 필드로 교체 -->
     <symbol id="av1" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="32" fill="#DCE9FF"/>
-      <path d="M12 64c0-11 9-17 20-17s20 6 20 17z" fill="#4A7DF0"/>
+      <circle cx="32" cy="32" r="32" fill="#E6DBFF"/>
+      <path d="M12 64c0-11 9-17 20-17s20 6 20 17z" fill="#9A6BF2"/>
       <circle cx="32" cy="26" r="12" fill="#FFD9C4"/>
       <path d="M21.1 21a12 12 0 0 1 21.8 0z" fill="#35364A"/>
       <circle cx="27" cy="27" r="1.6" fill="#2F2F33"/><circle cx="37" cy="27" r="1.6" fill="#2F2F33"/>
